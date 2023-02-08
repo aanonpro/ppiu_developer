@@ -5,21 +5,21 @@
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <a href="/" class="h1"><b>PSBU</b> </a>
+        <a href="/" class="h1"><b>PPIU</b> </a>
       </div>
       <div class="card-body">
         {{-- <p class="login-box-msg">Sign in to start your session</p> --}}
-  
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
           <div class="input-group mb-3">
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" 
-            name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email" autofocus>   
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+            name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email" autofocus>
             @error('email')
                 <span class=" invalid-feedback"></span>
                     <strong>{{ $message }}</strong>
                 </span>
-            @enderror     
+            @enderror
           </div>
           <div class="input-group mb-3">
             <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
@@ -49,7 +49,7 @@
           </div>
         </form>
         <!-- /.social-auth-links -->
-  
+
         <p class="mb-1">
             @if (Route::has('password.request'))
             <a class="btn btn-link" href="{{ route('password.request') }}">
@@ -66,5 +66,5 @@
     <!-- /.card -->
   </div>
   <!-- /.login-box -->
-  
+
 @endsection

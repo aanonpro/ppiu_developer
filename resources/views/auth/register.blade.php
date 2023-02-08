@@ -81,16 +81,16 @@
 @section('content')
 <div class="login-box ">
 
-   
+
 
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
       <div class="card-header text-center">
-        <a href="/" class="h1"><b>PSBU</b> </a>
+        <a href="/" class="h1"><b>PPIU</b> </a>
       </div>
       <div class="card-body">
         {{-- <p class="login-box-msg">Sign in to start your session</p> --}}
-  
+
         <form method="POST" action="{{ route('register') }}">
             @csrf
           <div class="input-group mb-3">
@@ -103,7 +103,7 @@
             @enderror
           </div>
           <div class="input-group mb-3">
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" 
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"
             required autocomplete="email" placeholder="Email">
             @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -153,5 +153,5 @@
     <!-- /.card -->
   </div>
   <!-- /.login-box -->
-  
+
 @endsection
